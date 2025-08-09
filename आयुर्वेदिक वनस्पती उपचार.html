@@ -1,0 +1,944 @@
+<!DOCTYPE html>
+<!-- saved from url=(0049)http://127.0.0.1:3002/AyurvedicOfficial/demo.html -->
+<html lang="mr"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8"><script type="text/javascript" src="./आयुर्वेदिक वनस्पती उपचार_files/___vscode_livepreview_injected_script"></script>
+    
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>आयुर्वेदिक वनस्पती उपचार</title>
+    <!-- Tailwind CSS -->
+    <script src="./आयुर्वेदिक वनस्पती उपचार_files/saved_resource"></script>
+    <!-- Font Awesome for icons -->
+    <link rel="stylesheet" href="./आयुर्वेदिक वनस्पती उपचार_files/all.min.css">
+    <!-- Google Fonts for Marathi text -->
+    <link href="./आयुर्वेदिक वनस्पती उपचार_files/css2" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Poppins', 'Noto Sans Devanagari', sans-serif;
+            background-color: lightblue;
+            color: #333;
+        }
+        
+        .hero-section {
+            background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url(background.jpg) no-repeat center center;
+            background-size: cover;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            color: white;
+        }
+        
+        .nav-link {
+            position: relative;
+        }
+        
+        .nav-link:after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 2px;
+            bottom: -5px;
+            left: 0;
+            background-color: #d4a017;
+            transition: width 0.3s ease;
+        }
+        
+        .nav-link:hover:after {
+            width: 100%;
+        }
+        
+        .product-card {
+            transition: transform 0.3s ease;
+        }
+        
+        .product-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .feedback-card {
+            animation: fadeIn 1s ease-in-out;
+        }
+        
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        
+        .gallery-item {
+            overflow: hidden;
+        }
+        
+        .gallery-item img {
+            transition: transform 0.5s ease;
+        }
+        
+        .gallery-item:hover img {
+            transform: scale(1.05);
+        }
+        
+        .star-rating {
+            color: #ffc107;
+            font-size: 1.5rem;
+        }
+        
+        .contact-form input, 
+        .contact-form textarea {
+            border-bottom: 2px solid #d4a017;
+        }
+        
+        .footer-link:hover {
+            color: #d4a017;
+        }
+        
+        /* Animation classes */
+        .animate-pop {
+            animation: pop 0.5s ease;
+        }
+        
+        @keyframes pop {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .whatsapp-float, .call-float {
+  position: fixed;
+  bottom: 80px;
+  right: 20px;
+  z-index: 999;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  background: #25D366;
+  padding: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+  transition: transform 0.3s;
+}
+.call-float {
+  bottom: 80px;
+  left: 20px;
+  background: #4CAF50;
+}
+.whatsapp-float:hover, .call-float:hover {
+  transform: scale(1.1);
+}
+.whatsapp-float img, .call-float img {
+  width: 100%;
+  height: auto;
+}
+    </style>
+<style>*, ::before, ::after{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }::backdrop{--tw-border-spacing-x:0;--tw-border-spacing-y:0;--tw-translate-x:0;--tw-translate-y:0;--tw-rotate:0;--tw-skew-x:0;--tw-skew-y:0;--tw-scale-x:1;--tw-scale-y:1;--tw-pan-x: ;--tw-pan-y: ;--tw-pinch-zoom: ;--tw-scroll-snap-strictness:proximity;--tw-gradient-from-position: ;--tw-gradient-via-position: ;--tw-gradient-to-position: ;--tw-ordinal: ;--tw-slashed-zero: ;--tw-numeric-figure: ;--tw-numeric-spacing: ;--tw-numeric-fraction: ;--tw-ring-inset: ;--tw-ring-offset-width:0px;--tw-ring-offset-color:#fff;--tw-ring-color:rgb(59 130 246 / 0.5);--tw-ring-offset-shadow:0 0 #0000;--tw-ring-shadow:0 0 #0000;--tw-shadow:0 0 #0000;--tw-shadow-colored:0 0 #0000;--tw-blur: ;--tw-brightness: ;--tw-contrast: ;--tw-grayscale: ;--tw-hue-rotate: ;--tw-invert: ;--tw-saturate: ;--tw-sepia: ;--tw-drop-shadow: ;--tw-backdrop-blur: ;--tw-backdrop-brightness: ;--tw-backdrop-contrast: ;--tw-backdrop-grayscale: ;--tw-backdrop-hue-rotate: ;--tw-backdrop-invert: ;--tw-backdrop-opacity: ;--tw-backdrop-saturate: ;--tw-backdrop-sepia: ;--tw-contain-size: ;--tw-contain-layout: ;--tw-contain-paint: ;--tw-contain-style: }/* ! tailwindcss v3.4.17 | MIT License | https://tailwindcss.com */*,::after,::before{box-sizing:border-box;border-width:0;border-style:solid;border-color:#e5e7eb}::after,::before{--tw-content:''}:host,html{line-height:1.5;-webkit-text-size-adjust:100%;-moz-tab-size:4;tab-size:4;font-family:ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";font-feature-settings:normal;font-variation-settings:normal;-webkit-tap-highlight-color:transparent}body{margin:0;line-height:inherit}hr{height:0;color:inherit;border-top-width:1px}abbr:where([title]){-webkit-text-decoration:underline dotted;text-decoration:underline dotted}h1,h2,h3,h4,h5,h6{font-size:inherit;font-weight:inherit}a{color:inherit;text-decoration:inherit}b,strong{font-weight:bolder}code,kbd,pre,samp{font-family:ui-monospace, SFMono-Regular, Menlo, Monaco, Consolas, "Liberation Mono", "Courier New", monospace;font-feature-settings:normal;font-variation-settings:normal;font-size:1em}small{font-size:80%}sub,sup{font-size:75%;line-height:0;position:relative;vertical-align:baseline}sub{bottom:-.25em}sup{top:-.5em}table{text-indent:0;border-color:inherit;border-collapse:collapse}button,input,optgroup,select,textarea{font-family:inherit;font-feature-settings:inherit;font-variation-settings:inherit;font-size:100%;font-weight:inherit;line-height:inherit;letter-spacing:inherit;color:inherit;margin:0;padding:0}button,select{text-transform:none}button,input:where([type=button]),input:where([type=reset]),input:where([type=submit]){-webkit-appearance:button;background-color:transparent;background-image:none}:-moz-focusring{outline:auto}:-moz-ui-invalid{box-shadow:none}progress{vertical-align:baseline}::-webkit-inner-spin-button,::-webkit-outer-spin-button{height:auto}[type=search]{-webkit-appearance:textfield;outline-offset:-2px}::-webkit-search-decoration{-webkit-appearance:none}::-webkit-file-upload-button{-webkit-appearance:button;font:inherit}summary{display:list-item}blockquote,dd,dl,figure,h1,h2,h3,h4,h5,h6,hr,p,pre{margin:0}fieldset{margin:0;padding:0}legend{padding:0}menu,ol,ul{list-style:none;margin:0;padding:0}dialog{padding:0}textarea{resize:vertical}input::placeholder,textarea::placeholder{opacity:1;color:#9ca3af}[role=button],button{cursor:pointer}:disabled{cursor:default}audio,canvas,embed,iframe,img,object,svg,video{display:block;vertical-align:middle}img,video{max-width:100%;height:auto}[hidden]:where(:not([hidden=until-found])){display:none}.container{width:100%}@media (min-width: 640px){.container{max-width:640px}}@media (min-width: 768px){.container{max-width:768px}}@media (min-width: 1024px){.container{max-width:1024px}}@media (min-width: 1280px){.container{max-width:1280px}}@media (min-width: 1536px){.container{max-width:1536px}}.fixed{position:fixed}.absolute{position:absolute}.relative{position:relative}.z-50{z-index:50}.mx-1{margin-left:0.25rem;margin-right:0.25rem}.mx-auto{margin-left:auto;margin-right:auto}.mb-16{margin-bottom:4rem}.mb-2{margin-bottom:0.5rem}.mb-3{margin-bottom:0.75rem}.mb-4{margin-bottom:1rem}.mb-6{margin-bottom:1.5rem}.mb-8{margin-bottom:2rem}.ml-3{margin-left:0.75rem}.mr-2{margin-right:0.5rem}.mr-4{margin-right:1rem}.mt-12{margin-top:3rem}.mt-20{margin-top:5rem}.mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mt-1{margin-top:0.25rem}.mt-10{margin-top:2.5rem}.mt-16{margin-top:4rem}.block{display:block}.inline-block{display:inline-block}.flex{display:flex}.grid{display:grid}.hidden{display:none}.h-1{height:0.25rem}.h-12{height:3rem}.h-16{height:4rem}.h-24{height:6rem}.h-64{height:16rem}.h-96{height:24rem}.h-full{height:100%}.w-12{width:3rem}.w-16{width:4rem}.w-20{width:5rem}.w-24{width:6rem}.w-full{width:100%}.max-w-2xl{max-width:42rem}.max-w-lg{max-width:32rem}.max-w-4xl{max-width:56rem}.cursor-pointer{cursor:pointer}.grid-cols-1{grid-template-columns:repeat(1, minmax(0, 1fr))}.grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.flex-col{flex-direction:column}.items-start{align-items:flex-start}.items-center{align-items:center}.justify-center{justify-content:center}.justify-between{justify-content:space-between}.gap-4{gap:1rem}.gap-6{gap:1.5rem}.gap-8{gap:2rem}.space-x-8 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(2rem * var(--tw-space-x-reverse));margin-left:calc(2rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-4 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1rem * var(--tw-space-x-reverse));margin-left:calc(1rem * calc(1 - var(--tw-space-x-reverse)))}.space-x-6 > :not([hidden]) ~ :not([hidden]){--tw-space-x-reverse:0;margin-right:calc(1.5rem * var(--tw-space-x-reverse));margin-left:calc(1.5rem * calc(1 - var(--tw-space-x-reverse)))}.space-y-2 > :not([hidden]) ~ :not([hidden]){--tw-space-y-reverse:0;margin-top:calc(0.5rem * calc(1 - var(--tw-space-y-reverse)));margin-bottom:calc(0.5rem * var(--tw-space-y-reverse))}.overflow-hidden{overflow:hidden}.rounded-full{border-radius:9999px}.rounded-lg{border-radius:0.5rem}.rounded-l{border-top-left-radius:0.25rem;border-bottom-left-radius:0.25rem}.rounded-r{border-top-right-radius:0.25rem;border-bottom-right-radius:0.25rem}.border-b-2{border-bottom-width:2px}.border-t{border-top-width:1px}.border-amber-700{--tw-border-opacity:1;border-color:rgb(180 83 9 / var(--tw-border-opacity, 1))}.border-gray-800{--tw-border-opacity:1;border-color:rgb(31 41 55 / var(--tw-border-opacity, 1))}.bg-amber-100{--tw-bg-opacity:1;background-color:rgb(254 243 199 / var(--tw-bg-opacity, 1))}.bg-amber-700{--tw-bg-opacity:1;background-color:rgb(180 83 9 / var(--tw-bg-opacity, 1))}.bg-gray-100{--tw-bg-opacity:1;background-color:rgb(243 244 246 / var(--tw-bg-opacity, 1))}.bg-gray-300{--tw-bg-opacity:1;background-color:rgb(209 213 219 / var(--tw-bg-opacity, 1))}.bg-gray-50{--tw-bg-opacity:1;background-color:rgb(249 250 251 / var(--tw-bg-opacity, 1))}.bg-gray-800{--tw-bg-opacity:1;background-color:rgb(31 41 55 / var(--tw-bg-opacity, 1))}.bg-orange-100{--tw-bg-opacity:1;background-color:rgb(255 237 213 / var(--tw-bg-opacity, 1))}.bg-transparent{background-color:transparent}.bg-white{--tw-bg-opacity:1;background-color:rgb(255 255 255 / var(--tw-bg-opacity, 1))}.bg-gray-900{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.object-cover{object-fit:cover}.p-4{padding:1rem}.p-6{padding:1.5rem}.p-8{padding:2rem}.px-2{padding-left:0.5rem;padding-right:0.5rem}.px-4{padding-left:1rem;padding-right:1rem}.px-6{padding-left:1.5rem;padding-right:1.5rem}.py-1{padding-top:0.25rem;padding-bottom:0.25rem}.py-2{padding-top:0.5rem;padding-bottom:0.5rem}.py-20{padding-top:5rem;padding-bottom:5rem}.py-3{padding-top:0.75rem;padding-bottom:0.75rem}.px-8{padding-left:2rem;padding-right:2rem}.py-12{padding-top:3rem;padding-bottom:3rem}.pb-48{padding-bottom:12rem}.pt-20{padding-top:5rem}.pt-6{padding-top:1.5rem}.text-center{text-align:center}.text-2xl{font-size:1.5rem;line-height:2rem}.text-3xl{font-size:1.875rem;line-height:2.25rem}.text-4xl{font-size:2.25rem;line-height:2.5rem}.text-sm{font-size:0.875rem;line-height:1.25rem}.text-xl{font-size:1.25rem;line-height:1.75rem}.text-xs{font-size:0.75rem;line-height:1rem}.font-bold{font-weight:700}.font-medium{font-weight:500}.text-amber-700{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.text-amber-800{--tw-text-opacity:1;color:rgb(146 64 14 / var(--tw-text-opacity, 1))}.text-gray-600{--tw-text-opacity:1;color:rgb(75 85 99 / var(--tw-text-opacity, 1))}.text-gray-700{--tw-text-opacity:1;color:rgb(55 65 81 / var(--tw-text-opacity, 1))}.text-gray-800{--tw-text-opacity:1;color:rgb(31 41 55 / var(--tw-text-opacity, 1))}.text-green-600{--tw-text-opacity:1;color:rgb(22 163 74 / var(--tw-text-opacity, 1))}.text-orange-600{--tw-text-opacity:1;color:rgb(234 88 12 / var(--tw-text-opacity, 1))}.text-white{--tw-text-opacity:1;color:rgb(255 255 255 / var(--tw-text-opacity, 1))}.text-amber-500{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.text-gray-400{--tw-text-opacity:1;color:rgb(156 163 175 / var(--tw-text-opacity, 1))}.text-gray-900{--tw-text-opacity:1;color:rgb(17 24 39 / var(--tw-text-opacity, 1))}.shadow-md{--tw-shadow:0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 4px 6px -1px var(--tw-shadow-color), 0 2px 4px -2px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.shadow-xl{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.transition{transition-property:color, background-color, border-color, fill, stroke, opacity, box-shadow, transform, filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter;transition-property:color, background-color, border-color, text-decoration-color, fill, stroke, opacity, box-shadow, transform, filter, backdrop-filter, -webkit-text-decoration-color, -webkit-backdrop-filter;transition-timing-function:cubic-bezier(0.4, 0, 0.2, 1);transition-duration:150ms}.duration-300{transition-duration:300ms}.hover\:bg-amber-800:hover{--tw-bg-opacity:1;background-color:rgb(146 64 14 / var(--tw-bg-opacity, 1))}.hover\:bg-gray-900:hover{--tw-bg-opacity:1;background-color:rgb(17 24 39 / var(--tw-bg-opacity, 1))}.hover\:text-amber-700:hover{--tw-text-opacity:1;color:rgb(180 83 9 / var(--tw-text-opacity, 1))}.hover\:text-amber-500:hover{--tw-text-opacity:1;color:rgb(245 158 11 / var(--tw-text-opacity, 1))}.hover\:text-amber-900:hover{--tw-text-opacity:1;color:rgb(120 53 15 / var(--tw-text-opacity, 1))}.hover\:shadow-lg:hover{--tw-shadow:0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 10px 15px -3px var(--tw-shadow-color), 0 4px 6px -4px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.hover\:shadow-xl:hover{--tw-shadow:0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);--tw-shadow-colored:0 20px 25px -5px var(--tw-shadow-color), 0 8px 10px -6px var(--tw-shadow-color);box-shadow:var(--tw-ring-offset-shadow, 0 0 #0000), var(--tw-ring-shadow, 0 0 #0000), var(--tw-shadow)}.focus\:border-amber-900:focus{--tw-border-opacity:1;border-color:rgb(120 53 15 / var(--tw-border-opacity, 1))}.focus\:outline-none:focus{outline:2px solid transparent;outline-offset:2px}@media (min-width: 640px){.sm\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}}@media (min-width: 768px){.md\:col-span-2{grid-column:span 2 / span 2}.md\:mb-0{margin-bottom:0px}.md\:mt-0{margin-top:0px}.md\:flex{display:flex}.md\:hidden{display:none}.md\:w-1\/2{width:50%}.md\:grid-cols-2{grid-template-columns:repeat(2, minmax(0, 1fr))}.md\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.md\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}.md\:flex-row{flex-direction:row}.md\:pr-10{padding-right:2.5rem}.md\:pr-6{padding-right:1.5rem}.md\:pl-6{padding-left:1.5rem}.md\:text-2xl{font-size:1.5rem;line-height:2rem}.md\:text-4xl{font-size:2.25rem;line-height:2.5rem}.md\:text-6xl{font-size:3.75rem;line-height:1}}@media (min-width: 1024px){.lg\:grid-cols-3{grid-template-columns:repeat(3, minmax(0, 1fr))}.lg\:grid-cols-5{grid-template-columns:repeat(5, minmax(0, 1fr))}}@media (min-width: 1280px){.xl\:grid-cols-4{grid-template-columns:repeat(4, minmax(0, 1fr))}}</style></head>
+<body>
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md fixed w-full z-50">
+        <div class="container mx-auto px-6 py-3 flex justify-between items-center">
+            <div class="flex items-center">
+                <img src="./आयुर्वेदिक वनस्पती उपचार_files/smalllogo.jpg" alt="श्री आयुर्वेदा लोगो - आयुर्वेदिक औषधांसह स्वर्णमय मंदिर" class="h-12">
+                <span class="ml-3 text-xl font-bold text-gray-800">आयुर्वेदिक वनस्पती उपचार</span>
+            </div>
+            
+            <div class="hidden md:flex space-x-8">
+                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#home" class="nav-link text-gray-800 hover:text-amber-700">मुख्यपृष्ठ</a>
+                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#about" class="nav-link text-gray-800 hover:text-amber-700">आमच्याबद्दल</a>
+                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#services" class="nav-link text-gray-800 hover:text-amber-700">सेवा</a>
+                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#products" class="nav-link text-gray-800 hover:text-amber-700">उत्पादने</a>
+                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#gallery" class="nav-link text-gray-800 hover:text-amber-700">गॅलरी</a>
+                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#feedback" class="nav-link text-gray-800 hover:text-amber-700">अभिप्राय</a>
+                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#contact" class="nav-link text-gray-800 hover:text-amber-700">संपर्क</a>
+                
+            </div>
+            
+            <button class="md:hidden text-gray-800 focus:outline-none" id="mobile-menu-button">
+                <i class="fas fa-bars text-2xl"></i>
+            </button>
+        </div>
+        
+        <!-- Mobile Menu -->
+        <div class="md:hidden hidden bg-white py-2 px-4" id="mobile-menu">
+            <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#home" class="block py-2 text-gray-800 hover:text-amber-700">मुख्यपृष्ठ</a>
+            <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#about" class="block py-2 text-gray-800 hover:text-amber-700">आमच्याबद्दल</a>
+            <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#services" class="block py-2 text-gray-800 hover:text-amber-700">सेवा</a>
+            <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#products" class="block py-2 text-gray-800 hover:text-amber-700">उत्पादने</a>
+            <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#gallery" class="block py-2 text-gray-800 hover:text-amber-700">गॅलरी</a>
+            <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#feedback" class="nav-link text-gray-800 hover:text-amber-700">अभिप्राय</a>
+            <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#contact" class="block py-2 text-gray-800 hover:text-amber-700">संपर्क</a>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="hero-section pt-20" id="home">
+        <div class="container mx-auto px-6 text-center">
+            <h1 class="text-4xl md:text-6xl font-bold mb-6 animate-pop">प्राकृतिक आरोग्याचे ठिकाण</h1>
+            <p class="text-xl md:text-2xl mb-8 max-w-2xl mx-auto">10+ वर्षांच्या आयुर्वेदिक परंपरेनुसार तयार केलेली उच्च दर्जाची औषधे</p>
+            <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#products" class="bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-full font-medium transition duration-300 animate-pop">आमची उत्पादने पहा</a>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section class="py-20 bg-white" id="about">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">आमच्याबद्दल</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-10">
+                    <img src="./आयुर्वेदिक वनस्पती उपचार_files/education.jpg" alt="आयुर्वेदिक औषधे तयार करणारे जुन्या पद्धतीचे कारखान्याचे आतील दृश्य" class="rounded-lg shadow-xl">
+                </div>
+                
+                <div class="md:w-1/2">
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4">आमची परंपरा</h3>
+                    <p class="text-gray-700 mb-4">आयुर्वेदिक वनस्पती उपचार ही एक कौटुंबिक आयुर्वेदिक औषधे तयार करणारी संस्था आहे जी 2015 पासून औषधनिर्मितीच्या पारंपारिक पद्धती वापरत आहे. आम्ही केवळ शुद्ध आणि नैसर्गिक सामग्री वापरतो.</p>
+                    
+                    <h3 class="text-2xl font-bold text-gray-800 mb-4 mt-8">मालकांची माहिती</h3>
+                    <div class="flex items-center mb-4">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/mamaphoto.jpg" alt="डॉ. राजेश पाटील - आयुर्वेद चिकित्सक आणि श्री आयुर्वेदाचे संस्थापक" class="rounded-full h-16 w-16 mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">गणेश सांगळे</h4>
+                            <p class="text-gray-600">संस्थापक आणि मुख्य आयुर्वेद चिकित्सक</p>
+                        </div>
+                    </div>
+                    
+                    <h4 class="font-bold text-gray-800 mb-2">शिक्षण</h4>
+                    <div class="mb-4">
+                        <div class="flex items-start mb-2">
+                            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded-full text-xs mr-2">आयुर्वेद चिकित्सक</span>
+                            <span>आयुर्वेदिक उपचार तज्ज्ञ</span>
+                        </div>
+                        <div class="flex items-start mb-2">
+                            <span class="bg-amber-100 text-amber-800 px-2 py-1 rounded-full text-xs mr-2">(आयुर्वेद)</span>
+                            <span>आयुर्वेदिक उपचार सल्लागार</span>
+                        </div>
+                    </div>
+                    
+                    <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#services" class="inline-block bg-gray-800 hover:bg-gray-900 text-white px-4 py-2 rounded-full font-medium transition duration-300">आमच्या सेवा पहा</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section class="py-20 bg-gray-100" id="services">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">आमच्या सेवा</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">आयुर्वेदिक परामर्श</h3>
+                    <p class="text-gray-700">अनुभवी आयुर्वेद डॉक्टरांकडून व्यक्तिगत आरोग्य परामर्श आणि उपचार योजना.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-mortar-pestle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">सानमपुडी औषधे</h3>
+                    <p class="text-gray-700">तुमच्या गरजेनुसार स्वतःच्या लाकडी कोल्ह्यात तयार केलेली औषधे.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">पंचकर्म उपचार</h3>
+                    <p class="text-gray-700">शरीरातील विषारी पदार्थ बाहेर काढण्यासाठी आणि शरीर शुद्धीकरणासाठी विशेष उपचार.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">रोग निदान</h3>
+                    <p class="text-gray-700">नाडी परीक्षा, जिभ पाहणे, इत्यादी पारंपारिक आयुर्वेदिक निदान पद्धती.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">योग आणि प्राणायाम</h3>
+                    <p class="text-gray-700">आरोग्यासाठी योगासने आणि श्वासोच्छवासाचे तंत्र शिकवणे.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">आहार सल्ला</h3>
+                    <p class="text-gray-700">तुमच्या प्रकृतीनुसार आहार योजना आणि आहारातील बदलांचे सूचन.</p>
+                </div>
+            </div>
+        </div> 
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+               
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">मूळव्याध</h3>
+                    <p class="text-gray-700">हेमंतकाळात आणि वात-पित्त-कफ दोषांच्या असंतुलनामुळे निर्माण होणारा गुदप्रदेशाशी संबंधित विकार.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-mortar-pestle"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">मूत्रपिंडातील खडे</h3>
+                    <p class="text-gray-700">मूत्रपिंडातील खडे म्हणजे मूत्रामधील खनिजे व क्षार हे एकत्र येऊन तयार होणारे लहान किंवा मोठ्या आकाराचे कण किंवा खडे होय. </p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-spa"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">मधुमेह</h3>
+                    <p class="text-gray-700">मधुमेह (Diabetes) हा एक दीर्घकालीन आजार आहे, ज्यामध्ये शरीरातील इन्सुलिन हार्मोनची कमतरता होते किंवा शरीर इन्सुलिनचा योग्य वापर करू शकत नाही.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-heartbeat"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">स्त्री रोग </h3>
+                    <p class="text-gray-700">स्त्रियांचे आजार व त्यांचे आयुर्वेदिक उपचार.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">पुरुष रोग</h3>
+                    <p class="text-gray-700">"पुरुष रोग" म्हणजे पुरुषांमध्ये होणारे लैंगिक, वीर्यविकार, जननेंद्रिय संबंधित त्रास, आणि मानसिक-शारीरिक कमजोरी.</p>
+                </div>
+                
+                <div class="bg-white p-6 rounded-lg shadow-md hover:shadow-lg transition duration-300">
+                    <div class="text-4xl text-amber-700 mb-4">
+                        <i class="fas fa-utensils"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">हाडे आणि सांधे </h3>
+                    <p class="text-gray-700">हाडे आणि सांधे हे शरीराचे अत्यंत महत्त्वाचे घटक आहेत. वयानुसार किंवा चुकीच्या जीवनशैलीमुळे हाडांची घनता कमी होणे, सांध्यांमध्ये वेदना, सूज, कंप, आखडणे असे त्रास होतात.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Products Section -->
+    <section class="py-20 bg-white" id="products">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">आमची उत्पादने</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-8">
+                <!-- Product 1 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="relative pb-48 overflow-hidden">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/product1.jpg" alt="च्यवनप्राश - आयुर्वेदिक रसायन आणि रोग प्रतिरोधक शक्ती वाढविणारे" class="absolute h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">च्यवनप्राश</h3>
+                        <p class="text-gray-700 mb-3">रोग प्रतिरोधक शक्ती वाढविणारे आयुर्वेदिक रसायन</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-700">₹450</span>
+                            <button class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full font-medium text-sm transition duration-300">ऑर्डर करण्यासाठी संपर्क करा</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 2 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="relative pb-48 overflow-hidden">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/product2.jpg" alt="त्रिफला चूर्ण - पाचन सुधारणारे आणि शरीर शुद्धीकरणासाठी" class="absolute h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">त्रिफला चूर्ण</h3>
+                        <p class="text-gray-700 mb-3">पाचन सुधारणारे आणि शरीर शुद्धीकरणासाठी</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-700">₹250</span>
+                            <button class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full font-medium text-sm transition duration-300">ऑर्डर करण्यासाठी संपर्क करा</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 3 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="relative pb-48 overflow-hidden">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/product3.jpg" alt="अश्वगंधा चूर्ण - ताण आणि थकवा कमी करणारे" class="absolute h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">अश्वगंधा चूर्ण</h3>
+                        <p class="text-gray-700 mb-3">ताण आणि थकवा कमी करणारे</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-700">₹350</span>
+                            <button class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full font-medium text-sm transition duration-300">ऑर्डर करण्यासाठी संपर्क करा</button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Product 4 -->
+                <div class="product-card bg-white rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <div class="relative pb-48 overflow-hidden">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/product1.jpg" alt="ब्राह्मी वटी - स्मरणशक्ती आणि एकाग्रता वाढविणारे" class="absolute h-full w-full object-cover">
+                    </div>
+                    <div class="p-4">
+                        <h3 class="text-xl font-bold text-gray-800 mb-2">ब्राह्मी वटी</h3>
+                        <p class="text-gray-700 mb-3">स्मरणशक्ती आणि एकाग्रता वाढविणारे</p>
+                        <div class="flex justify-between items-center">
+                            <span class="font-bold text-amber-700">₹300</span>
+                            <button class="bg-amber-700 hover:bg-amber-800 text-white px-4 py-2 rounded-full font-medium text-sm transition duration-300">ऑर्डर करण्यासाठी संपर्क करा</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="text-center mt-12">
+                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#" class="inline-block bg-amber-700 hover:bg-amber-800 text-white px-6 py-3 rounded-full font-medium transition duration-300">सर्व उत्पादने पहा</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Herbs Section -->
+    <section id="herbs" class="py-20 bg-white">
+        <div class="container mx-auto px-4">
+            <h2 class="text-3xl font-bold text-center mb-4 marathi-text">हर्बल औषधी</h2>
+            <p class="text-center text-gray-600 max-w-2xl mx-auto mb-16 marathi-text">आयुर्वेदात वापरली जाणारी प्रमुख औषधी वनस्पती आणि त्यांचे गुणधर्म</p>
+            
+            <div class="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-6">
+                <!-- Ashwagandha -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/ashvagndhalogo.jpg" alt="Ashwagandha plant with roots and berries, used in Ayurveda for stress relief" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">अश्वगंधा</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">ताण, थकवा आणि रोगप्रतिकारक शक्ती वाढवते</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">रसायन</span>
+                </div>
+                
+                <!-- Tulsi -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/tulsilogo.jpg" alt="Holy basil or Tulsi plant with green leaves, sacred in Ayurveda" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">तुळस</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">श्वसन समस्या आणि थंडीवर उपचार</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">कफनाशक</span>
+                </div>
+                
+                <!-- Neem -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/kadunimb.jpg" alt="Neem leaves and flowers, known for their purifying properties" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">कडुनिंब</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">त्वचा समस्या आणि रक्तशुद्धीकरण</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">रक्तशोधक</span>
+                </div>
+                
+                <!-- Brahmi -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/bramhilogo.jpg" alt="Brahmi herb used for brain and memory enhancement" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">ब्राह्मी</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">मेंदू आणि स्मरणशक्ती सुधारते</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">मेध्य</span>
+                </div>
+                
+                <!-- Turmeric -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/termericlogo.jpg" alt="Turmeric rhizomes and powder used as anti-inflammatory" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">हळद</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">दाहशामक आणि जख्म भरण्यास मदत</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">रोपण</span>
+                </div>
+                
+                <!-- Amla -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/aavlalogo.jpg" alt="Indian gooseberry or Amla fruits rich in Vitamin C" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">आवळा</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">व्हिटॅमिन सी आणि रोगप्रतिकारक शक्ती</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">रसायन</span>
+                </div>
+                
+                <!-- Shatavari -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/shatavrilogo.jpg" alt="Shatavari roots used for female reproductive health" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">शतावरी</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">स्त्रीरोग आणि हार्मोन संतुलन</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">वाजीकरण</span>
+                </div>
+                
+                <!-- Giloy -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/giloylogo.jpg" alt="Giloy stem and leaves used for fever and immunity" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">गिलोय</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">ताप आणि रोगप्रतिकारक शक्तीसाठी</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">ज्वरनाशक</span>
+                </div>
+                
+                <!-- Gokshura -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/gokshurlogo.jpg" alt="Gokshura fruits and plant parts used in urinary health" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">गोक्षुर</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">मूत्रमार्ग संबंधित समस्या</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">मूत्रल</span>
+                </div>
+                
+                <!-- Haritaki -->
+                <div class="bg-gray-50 rounded-lg p-6 text-center herb-card">
+                    <div class="w-24 h-24 mx-auto mb-4 flex items-center justify-center">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/haritakilogo.jpg" alt="Haritaki fruit known as the king of medicines in Ayurveda" class="rounded-full h-full w-full object-cover rotating">
+                    </div>
+                    <h3 class="font-bold mb-2 marathi-text">हरीतकी</h3>
+                    <p class="text-sm text-gray-600 mb-3 marathi-text">पचन आणि मेटाबोलिझम सुधारते</p>
+                    <span class="bg-orange-100 text-orange-600 text-xs px-2 py-1 rounded-full marathi-text">पाचन</span>
+                </div>
+            </div>
+            <br><br>
+
+    <!-- Gallery Section -->
+    <section class="py-20 bg-gray-100" id="gallery">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">गॅलरी</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="./आयुर्वेदिक वनस्पती उपचार_files/pic1.jpg" alt="आयुर्वेदिक औषधे तयार करण्याचे पारंपारिक उपकरणे आणि सामग्री" class="w-full h-64 object-cover">
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="./आयुर्वेदिक वनस्पती उपचार_files/pic2.jpg" alt="आयुर्वेदिक वनस्पतींचे उत्पादन करण्याच्या प्रक्रियेचे दृश्य" class="w-full h-64 object-cover">
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="./आयुर्वेदिक वनस्पती उपचार_files/pic3.jpg" alt="डॉक्टर रुग्णांना आयुर्वेदिक परामर्श देत असताना" class="w-full h-64 object-cover">
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="./आयुर्वेदिक वनस्पती उपचार_files/pic4.jpg" alt="श्री आयुर्वेदा केंद्राचे बाह्य दृश्य - शांत वातावरणासह" class="w-full h-64 object-cover">
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="./आयुर्वेदिक वनस्पती उपचार_files/pic5.jpg" alt="आयुर्वेदिक मसाज थेरपी सत्राचे दृश्य" class="w-full h-64 object-cover">
+                </div>
+                
+                <div class="gallery-item rounded-lg overflow-hidden shadow-md hover:shadow-xl transition duration-300">
+                    <img src="./आयुर्वेदिक वनस्पती उपचार_files/pic6.jpg" alt="आयुर्वेदिक औषधी वनस्पतींचे शेत" class="w-full h-64 object-cover">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="py-20 bg-white" id="testimonials">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#feedback"></a>
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">रुग्णांचे अभिप्राय</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="feedback-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/80495c85-465e-4a82-be5f-503b6185faca.png" alt="सुनीता पाटील - आयुर्वेदिक उपचारानंतर खुश रुग्ण" class="rounded-full h-12 w-12 mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">सुनीता पाटील</h4>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"माझ्या पाचन समस्येवर गणेश सांगळे यांनी केलेल्या उपचारानंतर मला खूप आराम मिळाला आहे. आयुर्वेदिक औषधांमुळे माझे आरोग्य सुधारले आहे."</p>
+                </div>
+                
+                <div class="feedback-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/fe0ecc5e-6438-436f-ac91-b2af8487b0cc.png" alt="रमेश भोसले - दीर्घकाळापासूनच्या वेदना नाहीशा झाल्या" class="rounded-full h-12 w-12 mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">रमेश भोसले</h4>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star-half-alt"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"दीर्घकाळापासूनच्या कमरदुखीवर आयुर्वेदिक वनस्पती पंचकर्म उपचारांमुळे लवकर आराम मिळाला. औषधे शुद्ध आणि प्रभावी आहेत."</p>
+                </div>
+                
+                <div class="feedback-card bg-gray-100 p-6 rounded-lg shadow-md">
+                    <div class="flex items-center mb-4">
+                        <img src="./आयुर्वेदिक वनस्पती उपचार_files/d78291ef-6113-4161-8aa9-3ad0b4e668eb.png" alt="मीनाक्षी देशपांडे - त्वचेच्या समस्येवर यशस्वी उपचार" class="rounded-full h-12 w-12 mr-4">
+                        <div>
+                            <h4 class="font-bold text-gray-800">मीनाक्षी देशपांडे</h4>
+                            <div class="star-rating">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-gray-700">"10 वर्षांपासून माझ्या त्वचेच्या समस्येवर कोणत्याही उपचारांनी आराम मिळत नव्हता. गणेश सांगळे यांच्या औषधांमुळे आता मला पूर्ण आराम मिळाला आहे."</p>
+                </div>
+            </div>
+            
+            <!-- Feedback Form -->
+            <div class="mt-20 bg-gray-100 p-8 rounded-lg shadow-md">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">तुमचा अभिप्राय द्या</h3>
+                
+                <form id="feedback-form" class="max-w-lg mx-auto">
+                    <div class="mb-4">
+                        <label for="name" class="block text-gray-700 font-medium mb-2">नाव</label>
+                        <input type="text" id="name" name="name" class="w-full px-4 py-2 border-b-2 border-amber-700 focus:outline-none focus:border-amber-900 bg-transparent">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="email" class="block text-gray-700 font-medium mb-2">ईमेल</label>
+                        <input type="email" id="email" name="email" class="w-full px-4 py-2 border-b-2 border-amber-700 focus:outline-none focus:border-amber-900 bg-transparent">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label class="block text-gray-700 font-medium mb-2">रेटिंग</label>
+                        <div class="star-rating flex justify-center" id="star-rating">
+                            <i class="far fa-star cursor-pointer text-2xl mx-1" data-rating="1"></i>
+                            <i class="far fa-star cursor-pointer text-2xl mx-1" data-rating="2"></i>
+                            <i class="far fa-star cursor-pointer text-2xl mx-1" data-rating="3"></i>
+                            <i class="far fa-star cursor-pointer text-2xl mx-1" data-rating="4"></i>
+                            <i class="far fa-star cursor-pointer text-2xl mx-1" data-rating="5"></i>
+                        </div>
+                        <input type="hidden" id="rating" name="rating" value="0">
+                    </div>
+                    
+                    <div class="mb-4">
+                        <label for="feedback" class="block text-gray-700 font-medium mb-2">अभिप्राय</label>
+                        <textarea id="feedback" name="feedback" rows="4" class="w-full px-4 py-2 border-b-2 border-amber-700 focus:outline-none focus:border-amber-900 bg-transparent"></textarea>
+                    </div>
+                    
+                    <button type="submit" class="bg-amber-700 hover:bg-amber-800 text-white px-6 py-2 rounded-full font-medium transition duration-300 mx-auto block">अभिप्राय पाठवा</button>
+                </form>
+                
+                <div id="success-message" class="hidden mt-4 text-center text-green-600 font-medium">
+                    धन्यवाद! तुमचा अभिप्राय यशस्वीरित्या पाठवला गेला आहे.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Map and Contact Section -->
+    <section class="py-20 bg-gray-100" id="contact">
+        <div class="container mx-auto px-6">
+            <div class="text-center mb-16">
+                <h2 class="text-3xl md:text-4xl font-bold text-gray-800 mb-4">संपर्क साधा</h2>
+                <div class="w-20 h-1 bg-amber-700 mx-auto"></div>
+            </div>
+            
+            <div class="flex flex-col md:flex-row">
+                <!-- Map -->
+                <div class="md:w-1/2 mb-8 md:mb-0 md:pr-6">
+                    <div class="h-96 bg-gray-300 rounded-lg overflow-hidden">
+                        <!-- Placeholder map, you can replace with actual Google Maps embed code -->
+                        <iframe src="./आयुर्वेदिक वनस्पती उपचार_files/embed.html" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                    </div>
+                </div>
+                
+                <!-- Contact Info -->
+                <div class="md:w-1/2 md:pl-6">
+                    <div class="bg-white p-8 rounded-lg shadow-md">
+                        <h3 class="text-2xl font-bold text-gray-800 mb-6">आमची संपर्क माहिती</h3>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-2">पत्ता</h4>
+                            <p class="text-gray-700">टाके वर मंिदर, गो डन िसटी,<br> संगमनेर(एम ल) अिह यानगर, 422605, महाराष्ट्र</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-2">संपर्क क्रमांक</h4>
+                            <p class="text-gray-700">
+                                <i class="fas fa-phone-alt text-amber-700 mr-2"></i> +91 7249670178<br>
+                                <i class="fas fa-phone-alt text-amber-700 mr-2"></i> 020 12345678</p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-2">ईमेल</h4>
+                            <p class="text-gray-700">
+                                <i class="fas fa-envelope text-amber-700 mr-2"></i>sangleg31@gmail.com
+                            </p>
+                        </div>
+                        
+                        <div class="mb-6">
+                            <h4 class="font-bold text-gray-800 mb-2">कामकाजाचे तास</h4>
+                            <p class="text-gray-700">
+                                सोमवार ते शनिवार: सकाळी 9 ते संध्याकाळी 7<br>
+                                रविवार: सकाळी 10 ते दुपारी 2
+                            </p>
+                        </div>
+                        
+                        <div>
+                            <h4 class="font-bold text-gray-800 mb-2">सोशल मीडिया</h4>
+                            <div class="flex space-x-4">
+                                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#" class="text-amber-700 hover:text-amber-900 text-2xl"><i class="fab fa-facebook"></i></a>
+                                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#" class="text-amber-700 hover:text-amber-900 text-2xl"><i class="fab fa-instagram"></i></a>
+                                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#" class="text-amber-700 hover:text-amber-900 text-2xl"><i class="fab fa-twitter"></i></a>
+                                <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#" class="text-amber-700 hover:text-amber-900 text-2xl"><i class="fab fa-youtube"></i></a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Contact Form -->
+            <div class="mt-16 bg-white p-8 rounded-lg shadow-md max-w-4xl mx-auto">
+                <h3 class="text-2xl font-bold text-gray-800 mb-6 text-center">आमच्याशी संपर्क साधा</h3>
+                
+                <form id="contact-form" class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                    <div>
+                        <label for="contact-name" class="block text-gray-700 font-medium mb-2">नाव</label>
+                        <input type="text" id="contact-name" name="contact-name" class="w-full px-4 py-2 border-b-2 border-amber-700 focus:outline-none focus:border-amber-900 bg-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="contact-email" class="block text-gray-700 font-medium mb-2">ईमेल</label>
+                        <input type="email" id="contact-email" name="contact-email" class="w-full px-4 py-2 border-b-2 border-amber-700 focus:outline-none focus:border-amber-900 bg-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="contact-phone" class="block text-gray-700 font-medium mb-2">फोन नंबर</label>
+                        <input type="tel" id="contact-phone" name="contact-phone" class="w-full px-4 py-2 border-b-2 border-amber-700 focus:outline-none focus:border-amber-900 bg-transparent">
+                    </div>
+                    
+                    <div>
+                        <label for="contact-subject" class="block text-gray-700 font-medium mb-2">विषय</label>
+                        <input type="text" id="contact-subject" name="contact-subject" class="w-full px-4 py-2 border-b-2 border-amber-700 focus:outline-none focus:border-amber-900 bg-transparent">
+                    </div>
+                    
+                    <div class="md:col-span-2">
+                        <label for="contact-message" class="block text-gray-700 font-medium mb-2">संदेश</label>
+                        <textarea id="contact-message" name="contact-message" rows="4" class="w-full px-4 py-2 border-b-2 border-amber-700 focus:outline-none focus:border-amber-900 bg-transparent"></textarea>
+                    </div>
+                    
+                    <div class="md:col-span-2 text-center">
+                        <button type="submit" class="bg-amber-700 hover:bg-amber-800 text-white px-8 py-3 rounded-full font-medium transition duration-300">संदेश पाठवा</button>
+                    </div>
+                </form>
+                
+                <div id="contact-success-message" class="hidden mt-4 text-center text-green-600 font-medium">
+                    धन्यवाद! तुमचा संदेश यशस्वीरित्या पाठवला गेला आहे. आम्ही लवकरच तुमच्याशी संपर्क साधू.
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="bg-gray-900 text-white py-12">
+        <div class="container mx-auto px-6">
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+                <div>
+                    <h3 class="text-xl font-bold mb-4">आयुर्वेदिक वनस्पती उपचार</h3>
+                    <p class="text-gray-400">10+ वर्षांच्या आयुर्वेदिक परंपरेनुसार तयार केलेली उच्च दर्जाची औषधे.</p>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">द्रुत लिंक</h3>
+                    <ul class="space-y-2">
+                        <li><a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#home" class="footer-link text-gray-400 hover:text-amber-500 transition">मुख्यपृष्ठ</a></li>
+                        <li><a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#about" class="footer-link text-gray-400 hover:text-amber-500 transition">आमच्याबद्दल</a></li>
+                        <li><a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#services" class="footer-link text-gray-400 hover:text-amber-500 transition">सेवा</a></li>
+                        <li><a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#products" class="footer-link text-gray-400 hover:text-amber-500 transition">उत्पादने</a></li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">संपर्क</h3>
+                    <ul class="space-y-2 text-gray-400">
+                        <li class="flex items-start">
+                            <i class="fas fa-map-marker-alt mt-1 mr-2 text-amber-500"></i>
+                            <span>टाके वर मंिदर, गो डन िसटी, संगमनेर, संगमनेर(एम ल),संगमनेर, अिह यानगर, 422605</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-phone-alt mr-2 text-amber-500"></i>
+                            <span>+91 7249670178</span>
+                        </li>
+                        <li class="flex items-center">
+                            <i class="fas fa-envelope mr-2 text-amber-500"></i>
+                            <span>sangleg31@gmail.com</span>
+                        </li>
+                    </ul>
+                </div>
+                
+                <div>
+                    <h3 class="text-xl font-bold mb-4">वृत्तपत्र</h3>
+                    <p class="text-gray-400 mb-4">आमच्या नवीन उत्पादनांबद्दल माहितीसाठी सबस्क्राइब करा.</p>
+                    <form class="flex">
+                        <input type="email" placeholder="तुमचा ईमेल" class="px-4 py-2 w-full rounded-l focus:outline-none text-gray-900">
+                        <button class="bg-amber-700 hover:bg-amber-800 px-4 py-2 rounded-r focus:outline-none">
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+            
+            <div class="border-t border-gray-800 mt-10 pt-6 flex flex-col md:flex-row justify-between items-center">
+                <p class="text-gray-400">© 2025 आयुर्वेदिक वनस्पती उपचार. सर्व हक्क राखीव.</p>
+                <div class="flex space-x-6 mt-4 md:mt-0">
+                    <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-facebook-f"></i></a>
+                    <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-twitter"></i></a>
+                    <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-instagram"></i></a>
+                    <a href="http://127.0.0.1:3002/AyurvedicOfficial/demo.html#" class="text-gray-400 hover:text-amber-500 transition"><i class="fab fa-youtube"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+     <!-- Floating Contact Buttons -->
+<a href="https://chat.whatsapp.com/JEspdAJV7PTBH5awT5lzb8?mode=ac_t" class="whatsapp-float" target="_blank" title="WhatsApp वर संपर्क करा">
+  <img src="./आयुर्वेदिक वनस्पती उपचार_files/733585.png" alt="WhatsApp">
+</a>
+
+<a href="tel:+917249670178" class="call-float" title="थेट कॉल करा">
+  <img src="./आयुर्वेदिक वनस्पती उपचार_files/597177.png" alt="Call">
+</a>
+
+    <!-- Backend JavaScript -->
+    <script>
+        // Mobile menu toggle
+        document.getElementById('mobile-menu-button').addEventListener('click', function() {
+            const menu = document.getElementById('mobile-menu');
+            menu.classList.toggle('hidden');
+        });
+        
+        // Star rating for feedback
+        const stars = document.querySelectorAll('#star-rating i');
+        const ratingInput = document.getElementById('rating');
+        
+        stars.forEach(star => {
+            star.addEventListener('click', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                ratingInput.value = rating;
+                
+                stars.forEach((s, i) => {
+                    if (i < rating) {
+                        s.classList.remove('far');
+                        s.classList.add('fas');
+                    } else {
+                        s.classList.remove('fas');
+                        s.classList.add('far');
+                    }
+                });
+            });
+            
+            star.addEventListener('mouseover', function() {
+                const rating = parseInt(this.getAttribute('data-rating'));
+                
+                stars.forEach((s, i) => {
+                    if (i < rating) {
+                        s.classList.remove('far');
+                        s.classList.add('fas');
+                    }
+                });
+            });
+            
+            star.addEventListener('mouseout', function() {
+                const currentRating = parseInt(ratingInput.value);
+                
+                stars.forEach((s, i) => {
+                    if (i >= currentRating) {
+                        s.classList.remove('fas');
+                        s.classList.add('far');
+                    }
+                });
+            });
+        });
+        
+        // Feedback form submission
+        document.getElementById('feedback-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            setTimeout(() => {
+                document.getElementById('success-message').classList.remove('hidden');
+                this.reset();
+                
+                // Reset stars
+                stars.forEach(star => {
+                    star.classList.remove('fas');
+                    star.classList.add('far');
+                });
+                ratingInput.value = 0;
+                
+                // Hide success message after 3 seconds
+                setTimeout(() => {
+                    document.getElementById('success-message').classList.add('hidden');
+                }, 3000);
+            }, 1000);
+        });
+        
+        // Contact form submission
+        document.getElementById('contact-form').addEventListener('submit', function(e) {
+            e.preventDefault();
+            
+            // Simulate form submission
+            setTimeout(() => {
+                document.getElementById('contact-success-message').classList.remove('hidden');
+                this.reset();
+                
+                // Hide success message after 3 seconds
+                setTimeout(() => {
+                    document.getElementById('contact-success-message').classList.add('hidden');
+                }, 3000);
+            }, 1000);
+        });
+        
+        // Animation on scroll
+        function animateOnScroll() {
+            const elements = document.querySelectorAll('.product-card, .feedback-card, .gallery-item');
+            
+            elements.forEach(element => {
+                const elementPosition = element.getBoundingClientRect().top;
+                const screenPosition = window.innerHeight / 1.3;
+                
+                if(elementPosition < screenPosition) {
+                    element.classList.add('animate-pop');
+                }
+            });
+        }
+        
+        window.addEventListener('scroll', animateOnScroll);
+        
+        // Initialize animations on page load
+        animateOnScroll();
+    </script>
+
+
+
+</div></section></body></html>
